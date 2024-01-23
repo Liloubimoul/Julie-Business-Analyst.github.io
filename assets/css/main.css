@@ -314,7 +314,7 @@ input, select, textarea {
 	}
 
 	code {
-		background: rgba(220, 220, 220, 0.25);
+		background: rgba(50, 41, 41, 0.25);
 		border-color: #eeeeee;
 	}
 
@@ -2913,8 +2913,8 @@ input, select, textarea {
 
 		header > .date {
 			display: block;
-			font-size: 0.8rem;
-			height: 1;
+			font-size: 0.9rem;
+			height: 5;
 			margin: 0 0 1rem 0;
 			position: relative;
 		}
@@ -2959,7 +2959,7 @@ input, select, textarea {
 			}
 
 			header.major > .date {
-				font-size: 1rem;
+				font-size: 1.6rem;
 				margin: 0 0 4rem 0;
 			}
 
@@ -2968,7 +2968,7 @@ input, select, textarea {
 					display: block;
 					position: absolute;
 					top: 50%;
-					width: calc(50% - 6rem);
+					width: calc(40% - 6rem);
 					border-top: solid 2px;
 				}
 
@@ -2988,7 +2988,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 700px) {
 
 			header.major {
 				margin: 0 0 2rem 0;
@@ -2997,7 +2997,7 @@ input, select, textarea {
 		}
 
 	header.major .date:before, header.major .date:after {
-		border-top-color: #eeeeee;
+		border-top-color: #100e0e;
 	}
 
 /* Table */
@@ -3234,7 +3234,7 @@ input, select, textarea {
 			width: 100%;
 			height: 100%;
 			background-color: #212931;
-			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+			background-image: url("../../images/behind.png");
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
 			background-repeat: repeat,								no-repeat,													no-repeat;
@@ -3254,11 +3254,12 @@ input, select, textarea {
 			-webkit-transition: opacity 1s ease-in-out;
 			-ms-transition: opacity 1s ease-in-out;
 			transition: opacity 1s ease-in-out;
-			-moz-transition-delay: 0.75s;
-			-webkit-transition-delay: 0.75s;
-			-ms-transition-delay: 0.75s;
-			transition-delay: 0.75s;
-			background: #1e252d;
+			-moz-transition-delay: 0.90s;
+			-webkit-transition-delay: 0.90s;
+			-ms-transition-delay: 0.90s;
+			transition-delay: 0.90s;
+			background: url('behind.png') center center no-repeat;
+    		background-size: cover;
 			content: '';
 			display: block;
 			height: 100%;
@@ -3466,15 +3467,15 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 900px) {
 
 			#intro {
-				padding: 3rem 2rem 1rem 2rem ;
+				padding: 3rem 2rem 0.8rem 2rem ;
 				min-height: 80vh;
 			}
 
 				#intro h1 {
-					font-size: 3.25rem;
+					font-size: 2.5rem;
 					line-height: 1.1;
 					margin-bottom: 1rem;
 				}
@@ -3528,7 +3529,7 @@ input, select, textarea {
 
 		#header a {
 			color: #ffffff;
-			border-bottom-color: rgba(255, 255, 255, 0.5);
+			border-bottom-color: rgba(96, 93, 93, 0.5);
 		}
 
 			#header a:hover {
@@ -3764,6 +3765,20 @@ input, select, textarea {
 		z-index: 2;
 	}
 
+	.content-container {
+		display: flex;
+		align-items: center; /* Vertically center the content */
+	}
+	
+	.image.main {
+		flex: 1; /* Take up as much space as possible */
+		margin-left: 20px; /* Add some margin for spacing */
+	}
+	
+	.text-container {
+		flex: 2; /* Adjust the ratio as needed */
+
+	}
 		#main > * {
 			padding: 4rem 4rem 2rem 4rem ;
 			border-top: solid 2px #eeeeee;
@@ -3783,11 +3798,11 @@ input, select, textarea {
 		}
 
 			#main > .post header.major > .date {
-				margin-top: -2rem;
+				margin-top: -4rem;
 			}
 
 			#main > .post header.major > h1, #main > .post header.major h2 {
-				font-size: 4rem;
+				font-size: 3rem;
 				line-height: 1.1;
 				margin: 0 0 2rem 0;
 			}
@@ -3796,7 +3811,7 @@ input, select, textarea {
 				text-align: center;
 			}
 
-			@media screen and (max-width: 1280px) {
+			@media screen and (max-width: 500px) {
 
 				#main > .post {
 					padding: 6rem 4rem 4rem 4rem ;
@@ -3811,7 +3826,7 @@ input, select, textarea {
 				}
 
 					#main > .post header.major > .date {
-						margin-top: -1rem;
+						margin-top: -2rem;
 						margin-bottom: 2rem;
 					}
 
@@ -4612,7 +4627,7 @@ input, select, textarea {
 			border: 0;
 			color: #909498;
 			cursor: pointer;
-			display: block;
+			display: flexbox;
 			height: 3.25rem;
 			line-height: 3.25rem;
 			padding-right: 1.25rem;
@@ -4620,7 +4635,7 @@ input, select, textarea {
 			right: 0;
 			text-align: right;
 			top: 0;
-			vertical-align: middle;
+			vertical-align: top;
 			width: 7rem;
 		}
 
@@ -4658,7 +4673,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#navPanel {
-				display: block;
+				display:block
 			}
 
 		}
